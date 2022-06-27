@@ -15,8 +15,21 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+        input = input.toLowerCase();
+        int count = 0;
+        for (int i = 0; i < input.length()-1; i++) {
+            if ((input.charAt(i) == 'z' || input.charAt(i) == 'y') && !Character.isLetter(input.charAt(i + 1))) {
+                count++;
+            }
+        }
+          if (input.charAt(input.length()-1) == 'z' || input.charAt(input.length()-1) == 'y') {
+                count++;
+            }
+
+        return count;
     }
+
+
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
@@ -27,9 +40,9 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
-    public String removeString(String base, String remove){
-        return null;
-    }
+//    public String removeString(String base, String remove){
+//        return ;
+//    }
 
     /**
      * Given a string, return true if the number of appearances of "is" anywhere in the string is equal
@@ -39,9 +52,9 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("This is notnot") // Should return true
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
-    public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
-    }
+//    public Boolean containsEqualNumberOfIsAndNot(String input){
+//        return ;
+//    }
 
     /**
      * We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
@@ -50,9 +63,9 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
-    public Boolean gIsHappy(String input){
-        return null;
-    }
+//    public Boolean gIsHappy(String input){
+//        return ;
+//    }
 
 
     /**
@@ -62,7 +75,7 @@ public class StringsAndThings {
      *            countTriple("xxxabyyyycd") // Should return 3
      *            countTriple("a") // Should return 0
      */
-    public Integer countTriple(String input){
-        return null;
-    }
+//    public Integer countTriple(String input){
+//        return ;
+//    }
 }
